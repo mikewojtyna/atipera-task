@@ -11,6 +11,7 @@ import pl.wojtyna.atipera.repository.Repositories;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Github repositories integration tests")
+@ExploratoryTest
     // Note: this test intentionally doesn't use any stubs or mocks
 class GithubRepositoriesIT {
 

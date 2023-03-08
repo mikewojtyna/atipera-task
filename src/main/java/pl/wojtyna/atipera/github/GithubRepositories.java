@@ -25,7 +25,7 @@ public class GithubRepositories implements Repositories {
         }
         catch (GithubException exception) {
             if (exception.getStatus() == 404) {
-                throw new UserDoesNotExistException(exception.getMessage(), exception);
+                throw new UserDoesNotExistException(exception.getMessage(), exception, username);
             }
             throw new RepositoriesException(exception.getMessage(), exception);
         }

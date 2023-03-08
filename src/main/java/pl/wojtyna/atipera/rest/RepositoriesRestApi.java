@@ -11,7 +11,7 @@ import pl.wojtyna.atipera.repository.Repository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/repositories")
+@RequestMapping("/api/v0/repositories")
 public class RepositoriesRestApi {
 
     private final Repositories repositories;
@@ -21,7 +21,7 @@ public class RepositoriesRestApi {
     }
 
     @GetMapping
-    public ResponseEntity<List<Repository>> allRepositoriesOf(@RequestParam("username") String username) {
+    public ResponseEntity<List<Repository>> allRepositoriesOf(@RequestParam("user") String username) {
         return ResponseEntity.ok(repositories.allOf(username));
     }
 }
